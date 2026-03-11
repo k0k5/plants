@@ -4,7 +4,7 @@
 }
 
 body{
-    display: flex;
+  display: flex;
   height: 100vh;
   margin: 0; 
   padding: 0; 
@@ -17,6 +17,7 @@ body{
 
 .startWin{
   display: flex;
+
 }
 
 .conteiners{
@@ -28,7 +29,7 @@ body{
 
 .allZone{
   background: #D3968C;
-  height: calc(100vh - 92px);
+  height: 932px;
   width: 563px;
   margin: 46px;
   border-radius: 16px;
@@ -86,8 +87,12 @@ body{
   height: 223px;
   margin: 67px;
   border-radius: 25px;
+  display: flex;
+  border: none;
 }
 
 .navText{
   margin: auto;
+  color: #839958;
+  font-size: 48px;
 }

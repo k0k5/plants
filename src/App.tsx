@@ -33,9 +33,9 @@ const Nav = () =>{
   return(
     <>
       <div className="nav">
-        <div className="navButton"><p className="navText">Информация</p></div>
-        <div className="navButton"><p className="navText">Управление</p></div>
-        <div className="navButton"><p className="navText">Журнал</p></div>
+        <button className="navButton"><p className="navText">Информация</p></button>
+        <button className="navButton"><p className="navText">Управление</p></button>
+        <button className="navButton"><p className="navText">Журнал</p></button>
       </div>
 
     </>
