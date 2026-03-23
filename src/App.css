@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Oi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oi&family=Oswald:wght@200..700&display=swap');
+
+
 #root {
   display: flex;
   height: 100vh;
@@ -8,13 +12,12 @@ body{
   height: 100vh;
   margin: 0; 
   padding: 0; 
-  display: flex;
   background: #F7F4D5;
   background-image: url('../src/assets/c318428cd3637a63e744755750d15d17 1.png') ;
   background-repeat: no-repeat;
   background-position: right;
 }
-
+/* 
 .startWin{
   display: flex;
 
@@ -24,6 +27,11 @@ body{
   height: 238px;
   width: 168px;
   background: #589BAA;
+  margin: auto;
+}
+
+.all{
+  display: flex;
   margin: auto;
 }
 
@@ -45,6 +53,7 @@ body{
 .conteiners{
   border-radius: 15px;
 }
+
 .activationBut{
   height: 80px;
   width: 445px;
@@ -73,8 +82,10 @@ body{
   height: 80px;
   border-radius: 1000px;
 }
+
 .butText{
   margin: auto;
+  font-family: "Oi", serif;
 }
 
 .nav{
@@ -95,4 +106,102 @@ body{
   margin: auto;
   color: #839958;
   font-size: 48px;
+  font-family: "Oi", serif;
+} */
+
+/* ----------------- */
+
+.infContainers{
+  margin: auto;
+}
+
+.manage{
+  width: 558px;
+  height: 67px;
+  background: #839958;
+  display: flex;
+  border-radius: 1000px;
+  margin: 36px;
+}
+
+.manageButton{
+  font-family: "Oswald", sans-serif;;
+  font-weight: bold;
+  font-size: 36px;
+  margin: auto;
+  border: none;
+  background: none;
+  color: #0A3323;
+}
+
+.active{
+  width: 279px;
+  background: #105666;
+  border-radius: 1000px;
+  color: #589BAA;
+  margin: 0;
+}
+
+
+.cells{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;  
+  margin: 34px;
+  margin-top: 70px;
+  overflow: scroll;
+  scroll-behavior: smooth;
+  height: 800px;
+  padding: 47px;
+  padding-bottom: 0;
+  overflow-x: hidden;
+  scrollbar-color: #D3968C #105666;
+}
+
+.cell{
+  width: 205px;
+  height: 205px;
+  background: #D3968C;
+  border-radius: 13px;
+}
+
+.information{
+  width: calc(100vw - 620px)
+}
+
+.back{
+  height: 67px;
+  width: 105px;  
+}
+
+.plantCard{
+  border-radius: 5px;
+  background: #839958;
+  height: fit-content;
+  width: 645px;
+  margin: auto;
+  margin-top: 76px;
+}
+
+.PlantImg{
+  width: 381px;
+  height: 313px;
+  border-radius: 36px;
+  background: #F7F4D5;
+  margin: 132px;
+  margin-top: 37px;
+  margin-bottom: 0;
+}
+
+.genInf{
+  margin: 35px;
+  font-family: "Oswald", sans-serif;
+  font-weight: lighter;
+  font-size: 40px;
+  padding-bottom: 30px;
+}
+
+.plantName{
+  font-size: 40px;
+  font-family: "Oi", serif;
 }
