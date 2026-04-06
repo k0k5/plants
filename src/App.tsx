@@ -1,134 +1,83 @@
 import { useState } from 'react'
+import styles from './App.module.css'
+import {BrowserRouter, Route, Routes, useNavigate} from "react-router-dom";
 
-import './App.css'
+import { InfoPage } from './pages/inf'
+import { ManagePage } from './pages/manage';
+import { ReportPage } from './pages/reports'
 
-
-export const InfoPage =() =>{
-    return(
-        <Main></Main>
-    )
-}
-
-const Main =()=>{
-    return(
-    <>
-    <Plants></Plants>
-    <PlantInf></PlantInf>
-    </>
-    )
-}
-
-export const Plants =() =>{
-    return(
-    <>
-    <div className="infContainers">
-      <div className="manage">
-          <button className="active manageButton">Инфо.</button>
-          <button className="manageButton">Управление</button>
-        </div>
-        <div className="mainBlock">
-          <div className="cells">
-            <div className="cell"></div>
-            <div className="cell"></div>
-            <div className="cell"></div>
-            <div className="cell"></div>
-            <div className="cell"></div>
-            <div className="cell"></div>
-            <div className="cell"></div>
-            <div className="cell"></div>
-        </div>
-        </div>
-        
-        <button className="addPlant"></button>
-    </div>
-        
-    </>
-    )
-}
-
-export const PlantInf =() =>{
-    return(
-        <div className="information">
-        <button className="back"></button>
-        <div className="plantCard">
-            <img src="" alt="" className="PlantImg" />
-            <div className="genInf">
-                <div className="plantName">Куст №1</div>
-                <div className="otherinf">Датчики: вкл.</div>
-                <div className="otherinf">Тип растения: Средний комнатный цветок</div>
-                <div className="otherinf">Влажность почвы: x%</div>
-                <div className="otherinf">Температура воздуха: x°C </div>
-                <div className="otherinf">Время авто. полива: раз в 2 дня </div>
-            </div>
-        </div>
-    </div>
-
-    )
-    }
-
-// const Zones = () =>{
-//   return(
-//     <>
-//     <div className="all">
-//       <div className="allZone">
-        
-//         <div className="allCont">
-//         <div className="conteiners"></div>
-//         <div className="conteiners"></div>
-//         <div className="conteiners"></div>
-//         <div className="conteiners"></div>
-//         <div className="conteiners"></div>
-//         <div className="conteiners"></div>
-//         </div>
-      
-        
-//        <div className="activationBut">
-//         <button className="on actBut"><p className='butText'>ВКЛ.</p></button>
-//         <button className="off actBut"><p className='butText'>ВЫКЛ.</p></button>
-//        </div>
-
-      
-//       </div>     
-//     </div>
-         
-
-//     </>
-//   )
-// }
-
-// const Nav = () =>{
-//   return(
-//     <>
-//       <div className="nav">
-//         <button className="navButton"><p className="navText">Информация</p></button>
-//         <button className="navButton"><p className="navText">Управление</p></button>
-//         <button className="navButton"><p className="navText">Журнал</p></button>
-//       </div>
-
-//     </>
-      
-//   )
-// }
-
-// const StarWin = () =>{
-//   return(
-//     <>
-//       <div className="startWin">
-//         <Zones></Zones>
-//         <Nav></Nav>
-//       </div>
-        
-//     </>
-    
-//   )
-// }
 
 function App() {
 return(
-  <InfoPage></InfoPage>
-)
- 
-
+    <BrowserRouter>
+        <Routes>
+            <Route path='/main' element={<StartWin/>}/>
+            <Route path='/info' element={<InfoPage/>}/>
+            <Route path='/manage' element={<ManagePage/>}/>
+            <Route path='/report' element={<ReportPage/>}/>
+        </Routes>
+    </BrowserRouter>
+    )
 }
+
+const Zones = () =>{
+  return(
+    <>
+    <div className={styles.all}>
+      <div className={styles.allZone}>
+        
+        <div className={styles.allCont}>
+        <div className={styles.conteiners}></div>
+        <div className={styles.conteiners}></div>
+        <div className={styles.conteiners}></div>
+        <div className={styles.conteiners}></div>
+        <div className={styles.conteiners}></div>
+        <div className={styles.conteiners}></div>
+        </div>
+      
+        
+       <div className={styles.activationBut}>
+        <button className={`${styles.on} ${styles.actBut}`}><p className={styles.butText}>ВКЛ.</p></button>
+        <button className={`${styles.off} ${styles.actBut}`}><p className={styles.butText}>ВЫКЛ.</p></button>
+       </div>
+
+      
+      </div>     
+    </div>
+         
+
+    </>
+  )
+}
+
+const Nav = () =>{
+     const navigate = useNavigate();
+
+  return(
+    <>
+      <div className={styles.nav}>
+        <button className={styles.navButton} onClick={()=>{navigate('/info')}}><p className={styles.navText}>Информация</p></button>
+        <button className={styles.navButton} onClick={()=>{navigate('/manage')}}><p className={styles.navText}>Управление</p></button>
+        <button className={styles.navButton} onClick={()=>{navigate('/report')}}><p className={styles.navText}>Журнал</p></button>
+      </div>
+
+    </>
+      
+  )
+}
+
+export const StartWin = () =>{
+  return(
+    <>
+      <div className={styles.startWin}>
+        <Zones></Zones>
+        <Nav></Nav>
+      </div>
+        
+    </>
+    
+  )
+}
+
 
 export default App

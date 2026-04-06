@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Oi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oi&family=Oswald:wght@200..700&display=swap');
+
+
+#root {
+  display: flex;
+  height: 100vh;
+}
+
+body{
+  display: flex;
+  height: 100vh;
+  margin: 0; 
+  padding: 0; 
+  background: #F7F4D5;
+  background-image: url('../src/assets/c318428cd3637a63e744755750d15d17 1.png') ;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.startWin{
+  display: flex;
+
+}
+
+.conteiners{
+  height: 238px;
+  width: 168px;
+  background: #589BAA;
+  margin: auto;
+}
+
+.all{
+  display: flex;
+  margin: auto;
+}
+
+.allZone{
+  background: #D3968C;
+  height: 932px;
+  width: 563px;
+  margin: 46px;
+  border-radius: 16px;
+}
+
+.allCont{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin: 25px;
+}
+
+.conteiners{
+  border-radius: 15px;
+}
+
+.activationBut{
+  height: 80px;
+  width: 445px;
+  background: #839958;
+  margin: auto;
+  border-radius: 1000px;
+  display: flex;
+}
+
+.on{
+  background: #105666;
+  color: #589BAA;
+  border: none;
+  font-size: 32px;
+  width: 226px;
+  height: 80px;
+  border-radius: 1000px;
+}
+
+.off{
+  background: none;
+  color: #0A3323;
+  border: none;
+  font-size: 32px;
+  width: 226px;
+  height: 80px;
+  border-radius: 1000px;
+}
+
+.butText{
+  margin: auto;
+  font-family: "Oi", serif;
+}
+
+.nav{
+  margin: auto;
+}
+
+.navButton{
+  background: #0A3323;
+  width: 606px;
+  height: 223px;
+  margin: 67px;
+  border-radius: 25px;
+  display: flex;
+  border: none;
+}
+
+.navText{
+  margin: auto;
+  color: #839958;
+  font-size: 48px;
+  font-family: "Oi", serif;
+} 
+
