@@ -1,0 +1,123 @@
+
+.infContainers{
+  margin: auto;
+}
+
+.manage{
+  width: 558px;
+  height: 67px;
+  background: #839958;
+  display: flex;
+  border-radius: 1000px;
+  margin: 36px;
+}
+
+.manageButton{
+  font-family: "Oswald", sans-serif;;
+  font-weight: bold;
+  font-size: 36px;
+  margin: auto;
+  border: none;
+  background: none;
+  color: #0A3323;
+}
+
+.active{
+  width: 279px;
+  background: #105666;
+  border-radius: 1000px;
+  color: #589BAA;
+  margin: 0;
+}
+
+
+.cells{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;  
+  margin: 34px;
+  margin-top: 70px;
+  overflow: scroll;
+  scroll-behavior: smooth;
+  height: 800px;
+  padding: 47px;
+  padding-bottom: 0;
+  overflow-x: hidden;
+  scrollbar-color: #D3968C #105666;
+  z-index: 1;
+}
+
+.cell{
+  width: 205px;
+  height: 205px;
+  background: #D3968C;
+  border-radius: 13px;
+}
+
+.information{
+  width: calc(100vw - 680px)
+}
+
+.plantCard{
+  border-radius: 5px;
+  background: #839958;
+  height: fit-content;
+  width: 645px;
+  margin: auto;
+  margin-top: 76px;
+  color: #0A3323;
+}
+
+.PlantImg{
+  width: 381px;
+  height: 313px;
+  border-radius: 36px;
+  background: #F7F4D5;
+  margin: 132px;
+  margin-top: 37px;
+  margin-bottom: 0;
+}
+
+.genInf{
+  margin: 35px;
+  font-family: "Oswald", sans-serif;
+  font-weight: lighter;
+  font-size: 40px;
+  padding-bottom: 30px;
+}
+
+.plantName{
+  font-size: 40px;
+  font-family: "Oi", serif;
+}
+
+.back{
+  width: 105px;
+  height: 67px;
+  border-radius: 1000px;
+  border: none;
+  background: #105666;
+  margin-top: 36px;
+  margin-right: 36px;
+}
+
+.backZone{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.addPlant{
+  width: 100px;
+  height: 100px;
+  border-radius: 1000px;
+  border: none;
+  background: #105666;
+  position: absolute;
+  z-index: 2;
+  bottom: 10px;
+  left: 36px;
+}
+
+.mainBlock{
+  position: relative;
+}

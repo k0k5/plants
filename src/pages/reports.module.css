@@ -1,0 +1,64 @@
+.header{
+    display: flex;
+}
+
+
+.title{
+    color: #0A3323;
+    font-size: 32px;
+    font-family: "Oi", serif;   
+    width: 560px;
+    height: 117px;
+    background: #839958;
+    border-bottom-right-radius: 98px;
+}
+
+.titleText{
+    margin-left: 98px;
+}
+
+.back{
+    width: 105px;
+    height: 67px;
+    border-radius: 1000px;
+    border: none;
+    background: #105666;
+    margin-top: 36px;
+    margin-right: 43px;
+}
+
+.backZone{
+    width: calc(100vw - 560px);
+    display: flex;
+    justify-content: flex-end;
+}
+
+.reportWin{
+    width: calc(100vw - 100px - 40px - 50px);
+    height: 760px;
+    background: #D5D1A29E;
+    margin-top: 50px;
+    margin-left: 50px;
+    border-radius: 20px;
+    padding: 40px;
+    font-family: "Oswald", sans-serif;
+    font-weight: lighter;
+
+}
+
+
+.waterReport{
+    display: flex;
+    color: #4B4614;
+    font-size: 40px;
+}
+
+.error{
+    color: #AA585A;
+}
+
+.errorReport{
+    color: #4B4614;
+    font-size: 40px;
+    display: flex;
+}
