@@ -13,7 +13,7 @@
 }
 
 .manageButton{
-  font-family: "Oswald", sans-serif;;
+  font-family: "Oswald", sans-serif;
   font-weight: bold;
   font-size: 36px;
   margin: auto;
@@ -120,4 +120,85 @@
 
 .mainBlock{
   position: relative;
+}
+
+.createWin{
+  border-radius: 30px;
+  display: flex;
+  position:fixed;
+  z-index: 1000;
+  width: 1030px;
+  height: 530px;
+  background: #839958;
+  font-size: 40px;
+  border: #0A3323;
+  border-width: 15px;
+  border-style:solid;
+  left: calc(100% / 5);
+  
+}
+
+
+
+.content{
+  display: flex;
+  position: absolute;
+  margin-left: 40px;
+  margin-top: 40px;
+
+}
+
+.textCont{
+  font-family:  "Oswald", sans-serif;
+  font-weight: lighter;
+  margin-left: 50px;
+}
+
+.but{
+  width: 395px;
+  height: 88px;
+  border-radius: 37px;
+  border: none;
+}
+
+.buttons{
+ 
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+}
+
+.closeWin{
+  margin-top: 30px;
+  font-family:"Oswald", sans-serif;
+  font-weight: bold;
+  color: #531012;
+  font-size: 40px;
+  background: #AA585A;
+}
+
+.createPlante{
+  font-family:"Oswald", sans-serif;
+  font-weight: bold;
+  color: #839958;
+  font-size: 40px;
+  background: #0A3323;
+}
+
+.addPic{
+  width: 469px;
+  height: 439px;
+  border-radius: 24px;
+  border: none;
+  background: #F7F4D5;
+  margin-left: 77px;
+}
+
+.addImg{
+  margin: auto;
+}
+
+.mainMW{
+  display: flex;
+  align-items: center;
 }
