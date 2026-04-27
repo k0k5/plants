@@ -1,6 +1,6 @@
 import {useNavigate} from "react-router-dom";
 import styles from './inf.module.css'
-
+import { createContext, useContext, useState } from 'react'
 
 export const InfoPage =() =>{
     return(
@@ -19,9 +19,55 @@ const Main =()=>{
 
 export const Plants =() =>{
     const navigate = useNavigate();
+    const [isOpen, setIsOpen] = useState(false)
 
+    const open = () =>{
+        setIsOpen(true)
+    }
+
+    const close = () =>{
+        setIsOpen(false)
+    }
+
+    const create = () => {
+        setIsOpen(false)
+    }
+    
+    let moduleWin = null;
+
+    if(isOpen){
+        moduleWin = (
+            <div className={styles.mainMW}>
+                <div className={styles.createWin}>
+                    <div className={styles.content}>
+                        <div className={styles.cont1}>
+
+                            <div className={styles.textCont}>
+                                <div>Название: </div>
+                                <div>Тип: </div>
+                                <div>Авто полив: раз в </div>
+                            </div>
+                            <div className={styles.buttons}>
+                                <button className={`${styles.but} ${styles.closeWin}`} onClick={close}>Отменить</button>
+                                <button className={`${styles.but} ${styles.createPlante}`} onClick={create}>Создать</button>
+                            </div>
+                            
+                        </div>
+                        <div className={styles.cont2}>
+                            <button className={styles.addPic}>
+                                <img className={styles.addImg} src="./src/assets/Plus circle.svg" alt="" />
+                            </button>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>    
+                
+        )
+    }
     return(
     <>
+   {moduleWin}
     <div className={styles.infContainers}>
       <div className={styles.manage}>
           <button className={`${styles.active} ${styles.manageButton}`}  onClick={()=>{navigate('/info')}}>Инфо.</button>
@@ -38,10 +84,11 @@ export const Plants =() =>{
             <div className={styles.cell}></div>
             <div className={styles.cell}></div>
         </div>        
-        <button className={styles.addPlant}><img src="./src/assets/+.svg" alt="" /></button>
+        <button className={styles.addPlant} onClick={open}><img src="./src/assets/+.svg" alt="" /></button>
         </div>
         
     </div>
+     
         
     </>
     )
